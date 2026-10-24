@@ -1,0 +1,28 @@
+/* ==========================================================
+   Unterseiten: Impressum & Datenschutz
+   (ergänzt style.css)
+   ========================================================== */
+.legal-page { padding: 96px 0 112px; }
+.legal-page .w { max-width: 760px; }
+
+.legal-page h1 {
+  margin-bottom: 56px;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+.legal-page h2 {
+  margin: 48px 0 14px;
+  font-size: 1.35rem;
+  letter-spacing: -.01em;
+}
+.legal-page h2::before { display: none; }
+
+.legal-page p { color: #cfcfcf; }
+.legal-page a { color: var(--white); }
+
+footer a[aria-current="page"] { color: var(--white); }
+
+@media (max-width: 640px) {
+  .legal-page { padding: 64px 0 76px; }
+  .legal-page h1 { margin-bottom: 36px; }
+}
