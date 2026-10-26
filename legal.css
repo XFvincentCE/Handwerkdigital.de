@@ -26,3 +26,27 @@ footer a[aria-current="page"] { color: var(--white); }
   .legal-page { padding: 64px 0 76px; }
   .legal-page h1 { margin-bottom: 36px; }
 }
+
+/* Listen und Inhaltsverzeichnis */
+.legal-page ul,
+.legal-page ol { margin: 0 0 16px; padding-left: 22px; color: #cfcfcf; }
+.legal-page li { margin: 6px 0; }
+.legal-page li strong { color: var(--white); }
+
+.legal-page .toc {
+  columns: 2;
+  column-gap: 40px;
+  padding: 20px 20px 20px 42px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.legal-page .toc a { color: #cfcfcf; text-decoration: none; }
+.legal-page .toc a:hover { color: var(--accent-text); }
+
+.legal-page h2[id] { scroll-margin-top: 90px; }
+
+@media (max-width: 640px) {
+  .legal-page .toc { columns: 1; }
+}
+.legal-page .toc li { margin: 0 0 10px; break-inside: avoid; }

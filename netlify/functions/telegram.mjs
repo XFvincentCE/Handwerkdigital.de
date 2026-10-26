@@ -1,3 +1,17 @@
+// ----------------------------------------------------------
+// Kurze Telegram-Benachrichtigung bei einer neuen Anfrage
+//
+// Aus Datenschutzgründen werden KEINE Kundendaten (Name, Kontakt,
+// Nachricht) an Telegram geschickt – nur der Hinweis und das Thema.
+// Die vollständige Anfrage kommt per E-Mail über Web3Forms.
+//
+// Benötigte Umgebungsvariablen (in Netlify eintragen, NICHT hier):
+//   TELEGRAM_BOT_TOKEN  – Token vom @BotFather
+//   TELEGRAM_CHAT_ID    – deine Chat-ID
+// ----------------------------------------------------------
+
+// Nur diese Themen werden übernommen (wie im Formular)
+const THEMEN = ['Website', 'Social Media', 'Mehr Anfragen', 'Etwas anderes'];
 
 export default async (req) => {
   if (req.method !== 'POST') {
@@ -14,24 +28,13 @@ export default async (req) => {
   // Spam-Schutz: unsichtbares Feld wurde ausgefüllt
   if (data.botcheck) return new Response('OK');
 
-  // Eingaben kürzen, damit niemand riesige Nachrichten schickt
-  const clean = (value, max = 300) => String(value ?? '').trim().slice(0, max);
-
-  const name = clean(data.name, 100);
-  const kontaktweg = clean(data.kontaktweg, 150);
-  if (!name || !kontaktweg) {
-    return new Response('Name und Kontakt fehlen', { status: 400 });
-  }
+  const thema = THEMEN.includes(data.thema) ? data.thema : 'Etwas anderes';
 
   const text = [
     '🔔 Neue Anfrage über die Website',
+    'Thema: ' + thema,
     '',
-    'Name: ' + name,
-    'Betrieb: ' + (clean(data.betrieb, 150) || '–'),
-    'Kontakt: ' + kontaktweg,
-    'Thema: ' + (clean(data.thema, 50) || '–'),
-    '',
-    clean(data.msg, 1500) || '(keine Nachricht)'
+    'Alle Details findest du in deinem E-Mail-Postfach.'
   ].join('\n');
 
   const token = process.env.TELEGRAM_BOT_TOKEN;
