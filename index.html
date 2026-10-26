@@ -69,11 +69,11 @@
         </button>
         <button class="service-card" type="button" data-service="social">
           <h3>Social Media</h3>
-          <p class="muted">Ihre Kanäle sauber aufgesetzt und jeden Monat ein paar Beiträge, ohne dass Sie sich kümmern müssen.</p>
+          <p class="muted">Regelmäßig Beiträge, Storys und Reels auf Instagram, TikTok, Facebook und Co., ohne dass Sie sich kümmern müssen.</p>
         </button>
         <button class="service-card" type="button" data-service="kunden">
-          <h3>KI Automatisierung</h3>
-          <p class="muted">Ein einfacher KI-Helfer für Ihren Betrieb, der Ihnen lästige Schreib- und Büroarbeit im Alltag abnimmt</p>
+          <h3>KI-Automatisierung</h3>
+          <p class="muted">Drei KI-Helfer für Angebote, Arbeitsberichte und E-Mails. Weniger Papierkram, schneller zur Rechnung.</p>
         </button>
       </div>
       <div class="service-details" id="service-details" aria-live="polite"></div>
@@ -214,34 +214,171 @@
     const serviceInfos = {
       website: `
         <h3>Website: das Starter-Paket</h3>
-        <p class="muted">Ein klarer Start für Handwerksbetriebe, die online professionell gefunden werden möchten.</p>
+        <p class="muted">Ein professioneller Auftritt, der bei Google gefunden wird und aus Besuchern Anfragen macht. Zum Festpreis, ohne laufende Überraschungen.</p>
+
+        <div class="ai-grid">
+          <div class="ai-item">
+            <span class="ai-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+            </span>
+            <h4>Moderne Website</h4>
+            <p>3 bis 5 Seiten, auf Ihren Betrieb zugeschnitten. Schnell geladen und auf dem Handy genauso gut lesbar wie am Computer.</p>
+            <div class="ai-example">
+              <span class="ai-label">Zum Beispiel</span>
+              <p><strong>Startseite:</strong> Wer Sie sind und was Sie anbieten</p>
+              <p><strong>Leistungen:</strong> Ihre Arbeiten im Überblick</p>
+              <p><strong>Referenzen:</strong> Fotos fertiger Projekte</p>
+              <p><strong>Kontakt:</strong> Formular, Telefon, Anfahrt</p>
+            </div>
+          </div>
+
+          <div class="ai-item">
+            <span class="ai-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+            </span>
+            <h4>Anfragen direkt aufs Handy</h4>
+            <p>Über das Kontaktformular kommen neue Anfragen sofort per E-Mail und als Nachricht auf Ihr Handy. So verpassen Sie keinen Auftrag.</p>
+            <div class="ai-example">
+              <span class="ai-label">Auf Ihrem Handy erscheint</span>
+              <p><strong>Neue Anfrage über die Website</strong></p>
+              <p><strong>Name:</strong> Sabine Weber</p>
+              <p><strong>Thema:</strong> Neue Steckdosen im Wohnzimmer</p>
+              <p><strong>Kontakt:</strong> 0171 …</p>
+            </div>
+          </div>
+
+          <div class="ai-item">
+            <span class="ai-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            </span>
+            <h4>Bei Google gefunden werden</h4>
+            <p>Ihr Google-Unternehmensprofil wird einmal sauber eingerichtet und mit der Website verknüpft. So finden Kunden aus der Region Sie schneller.</p>
+            <div class="ai-example">
+              <span class="ai-label">Ein Kunde sucht</span>
+              <p>„Elektriker Reutlingen“</p>
+              <span class="ai-label">Und sieht</span>
+              <p>Ihren Betrieb mit Öffnungszeiten, Telefonnummer, Route und Link zur Website.</p>
+            </div>
+          </div>
+        </div>
+
         <ul>
-          <li>Kleine Website mit <strong>3 bis 5 Seiten</strong>, auf Ihren Betrieb angepasst</li>
-          <li>Kontaktformular mit automatischer Bestätigung an den Kunden</li>
-          <li>Impressum und Datenschutz</li>
-          <li>Google-Unternehmensprofil einmal sauber einrichten</li>
-          <li><strong>Extra Wunsch: </strong>Ki Chatbot auf der eigenen Website</li>
+          <li>Impressum- und Datenschutzseite technisch eingebunden</li>
+          <li>Festpreis, Sie wissen vorher genau, was es kostet</li>
+          <li><strong>Optional:</strong> KI-Chatbot auf Ihrer Website</li>
         </ul>
         <p class="detail-price">(preis)</p>`,
 
       social: `
-        <h3>Social Media: das Mini-Paket</h3>
-        <p class="muted">Regelmäßig sichtbar bleiben, ohne dass es Ihnen Zeit kostet.</p>
+        <h3>Social Media: das Monats-Paket</h3>
+        <p class="muted">Regelmäßig sichtbar auf den Plattformen, auf denen Ihre Kunden unterwegs sind. Sie liefern die Fotos und Videos von der Baustelle, ich mache den Rest.</p>
+
+        <div class="ai-grid">
+          <div class="ai-item">
+            <span class="ai-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            </span>
+            <h4>Profile einrichten</h4>
+            <p>Ihre Profile auf Instagram, TikTok, Facebook oder anderen Plattformen werden neu angelegt oder aufgeräumt, damit sie auf den ersten Blick professionell wirken.</p>
+            <div class="ai-example">
+              <span class="ai-label">Das gehört dazu</span>
+              <p><strong>Profilbild:</strong> Logo oder Teamfoto</p>
+              <p><strong>Beschreibung:</strong> Was Sie machen und wo</p>
+              <p><strong>Kontakt:</strong> Button zum Anrufen und Link zur Website</p>
+            </div>
+          </div>
+
+          <div class="ai-item">
+            <span class="ai-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></svg>
+            </span>
+            <h4>Beiträge, Storys und Reels</h4>
+            <p>Jeden Monat <strong>8 Beiträge, 4 Reels und regelmäßige Storys</strong> aus den Fotos und Videos, die Sie mir schicken.</p>
+            <div class="ai-example">
+              <span class="ai-label">Sie haben die Wahl</span>
+              <p><strong>Eigene Wünsche:</strong> Sie sagen, welches Projekt oder Thema gezeigt werden soll.</p>
+              <p><strong>Oder ganz entspannt:</strong> Ich wähle passende Formate für Sie aus, z. B. Vorher-nachher oder einen Blick auf die Baustelle.</p>
+            </div>
+          </div>
+
+          <div class="ai-item">
+            <span class="ai-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            </span>
+            <h4>Planung und Veröffentlichung</h4>
+            <p>Ich plane die Beiträge über den Monat verteilt und veröffentliche sie für Sie. Sie müssen sich um nichts kümmern.</p>
+            <div class="ai-example">
+              <span class="ai-label">So kann ein Monat aussehen</span>
+              <p><strong>Jede Woche:</strong> 2 Beiträge und 1 Reel</p>
+              <p><strong>Mehrmals pro Woche:</strong> Storys aus dem Arbeitsalltag</p>
+              <p><strong>Plattformen:</strong> Instagram, TikTok, Facebook, YouTube Shorts oder andere nach Wunsch</p>
+            </div>
+          </div>
+        </div>
+
         <ul>
-          <li>Profil einrichten oder aufräumen</li>
-          <li><strong>4 Beiträge und 1 bis 2 Reels</strong> pro Monat aus Fotos und Videos, die Sie mir schicken</li>
-          <li>Planung und Veröffentlichung übernehme ich</li>
-          <li>Keine Community-Pflege: Kommentare und Nachrichten beantworten Sie selbst</li>
+          <li>Kommentare und Nachrichten beantworten Sie selbst, so bleibt der Kontakt persönlich</li>
+          <li>Monatlich kündbar</li>
         </ul>
         <p class="detail-price">()</p>`,
 
       kunden: `
-        <h3>KI Automatisierung: das Basis-Paket</h3>
-        <p class="muted">Aus Ihrer bestehnden Arbeit weniger machen mit Ki Unterstüzung.</p>
+        <h3>KI-Automatisierung: das Basis-Paket</h3>
+        <p class="muted">Drei Helfer für den Papierkram, der abends und am Wochenende die meiste Zeit kostet. Eingerichtet auf Ihren Betrieb, ohne technisches Vorwissen.</p>
+
+        <div class="ai-grid">
+          <div class="ai-item">
+            <span class="ai-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>
+            </span>
+            <h4>Angebots-Assistent</h4>
+            <p>Nach der Besichtigung kurz einsprechen, was gemacht werden soll. Die KI macht daraus einen sauberen Angebotstext. Die Preise tragen Sie selbst ein.</p>
+            <div class="ai-example">
+              <span class="ai-label">Sie sprechen ins Handy</span>
+              <p>„Bad Familie Krämer: alte Fliesen raus, 8 qm Wand neu fliesen, Waschtisch tauschen, Steckdose neben Spiegel.“</p>
+              <span class="ai-label">Die KI schreibt</span>
+              <p><strong>Pos. 1:</strong> Demontage und Entsorgung der vorhandenen Wandfliesen</p>
+              <p><strong>Pos. 2:</strong> Verlegung neuer Wandfliesen, ca. 8 m²</p>
+              <p><strong>Pos. 3:</strong> Austausch des Waschtisches inkl. Anschluss</p>
+              <p><strong>Pos. 4:</strong> Installation einer zusätzlichen Steckdose neben dem Spiegel</p>
+            </div>
+          </div>
+
+          <div class="ai-item">
+            <span class="ai-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 11l2 2 4-4"/><path d="M9 17h6"/></svg>
+            </span>
+            <h4>Arbeitsbericht-Assistent</h4>
+            <p>Nach dem Einsatz eine Sprachnachricht – fertig ist der Arbeitsbericht mit Tätigkeiten, Material und Stunden. Die Grundlage für eine schnelle Rechnung.</p>
+            <div class="ai-example">
+              <span class="ai-label">Sie sprechen ins Handy</span>
+              <p>„Bei Müller, 2 Stunden, FI-Schalter getauscht, 3 Meter Kabel NYM 3x1,5, Steckdose Küche repariert.“</p>
+              <span class="ai-label">Die KI erstellt</span>
+              <p><strong>Kunde:</strong> Müller</p>
+              <p><strong>Tätigkeiten:</strong> FI-Schutzschalter getauscht, Steckdose in der Küche instand gesetzt</p>
+              <p><strong>Material:</strong> 3 m NYM-J 3x1,5 mm²</p>
+              <p><strong>Arbeitszeit:</strong> 2,0 Std.</p>
+            </div>
+          </div>
+
+          <div class="ai-item">
+            <span class="ai-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </span>
+            <h4>E-Mail-Assistent</h4>
+            <p>Sie sagen kurz, was Sie schreiben wollen. Die KI macht daraus eine ordentliche E-Mail an Ihren Kunden.</p>
+            <div class="ai-example">
+              <span class="ai-label">Sie sprechen ins Handy</span>
+              <p>„Herr Maier, Termin Dienstag 8 Uhr passt, Schlüssel fürs Kellerabteil mitbringen.“</p>
+              <span class="ai-label">Die KI schreibt</span>
+              <p>„Sehr geehrter Herr Maier, gerne bestätigen wir Ihnen den Termin am Dienstag um 8:00 Uhr. Bitte halten Sie den Schlüssel für das Kellerabteil bereit. Mit freundlichen Grüßen …“</p>
+            </div>
+          </div>
+        </div>
+
         <ul>
-          <li><strong>E-Mail-Assistent:</strong>Stichpunkte oder Sprachnachricht eingeben – die KI schreibt sofort fertige, professionelle Kunden-Mails und Antworten.</li>
-          <li><strong>Bautagebuch-Assistent</strong>Gesprochene Sprachnotizen von der Baustelle automatisch in saubere, strukturierte Tagesberichte umwandeln.</li>
-          <li><strong>Text- & Anzeigen-Assistent:</strong>Schnelle Hilfe beim Formulieren von Angebotstexten, Social-Media-Beiträgen oder einfachen Stellenanzeigen.</li>
+          <li>Einrichtung auf Ihren Betrieb und kurze Einweisung inklusive</li>
+          <li>Sie behalten die Kontrolle: Jeder Text wird vor dem Versenden von Ihnen geprüft</li>
         </ul>
         <p class="detail-price">(preis)</p>`
     };
